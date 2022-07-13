@@ -1,0 +1,28 @@
+docker images
+
+
+
+docker-compose -f local.yml up
+
+docker-compose -f local.yml ps
+
+docker container ls
+
+docker stop [container]
+
+export COMPOSE_FILE=local.yml (en windows hay que crear un archivo .env y agregarle esto y correr el comando set COMPOSE_FILE=local.yml)
+
+docker-compose up
+
+En otra terminal
+docker-compose run --rm django python manage.py createsuperuser
+
+pip install django[argon2]
+
+pip install argon2_cffi
+
+pip install -U cffi pip setuptools
+
+docker rm -f cride-platzi-1-codebase_django_1
+
+docker-compose run --rm --service-ports django
