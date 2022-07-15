@@ -36,3 +36,23 @@ class CRideModel(models.Model):
 
         get_latests_by= 'created'
         ordering = ['-created', '-mod']
+
+
+class Person(models.Model):
+    first_name = models.CharField()
+    last_name = models.CharField()
+
+class MyPerson(Person):
+    class Meta:
+        proxy = True
+    
+    def say_hi(name):
+        pass
+
+MyPerson.objects.all()
+ricardo = MyPerson.objects.get(pk=1)
+ricardo.say_hi('Pablo')
+
+rulo = Person.objects.get(pk=2)
+rulo.say_hi('Pablo')
+
